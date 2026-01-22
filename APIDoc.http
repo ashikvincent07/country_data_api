@@ -2,12 +2,11 @@
 POST http://127.0.0.1:8000/country/
 Content-Type: : application/json
 
-
     {
-        "name": "Egypt",
-        "capital": "Cairo",
-        "region": "Africa",
-        "subregion": "Northern Africa",
+        "name": "UAE",
+        "capital": "Dubai",
+        "region": "Asia",
+        "subregion": "Asia",
         "population": 109000000,
         "area": 1002450,
         "currency": "EGP",
@@ -16,33 +15,41 @@ Content-Type: : application/json
     }
 
 
+
 # api call for list all countries
 ###
 GET http://127.0.0.1:8000/country/
 Accept: application/json
 
 
+
+
 # api call for filter country
 ###
-GET http://127.0.0.1:8000/country?region=Asia&population_gt=1000000
+GET http://127.0.0.1:8000/country?region=Asia
 Accept: application/json
+
 
 
 
 # api call for retrieve country
 ###
-GET http://127.0.0.1:8000/country/3/
+GET http://127.0.0.1:8000/country/4/
 Accept: application/json
+
+
 
 
 # api call for update country
 ###
-PUT http://127.0.0.1:8000/country/3/
+PUT http://127.0.0.1:8000/country/7/
 Content-Type: application/json
 
 {
-    "is_independent": "False"
+    "currency": "AED"
 }
+
+
 
 
 # api call for delete country
